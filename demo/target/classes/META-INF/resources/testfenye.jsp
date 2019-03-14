@@ -6,7 +6,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-    <form action="/bootdemo/login" method="post">
+    <form action="/bootdemo/login/student" method="post">
         username:<input type="text" name="username"/>
         psw:<input type="password" name="password">
 

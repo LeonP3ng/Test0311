@@ -1,20 +1,18 @@
 package com.bluemsun.demo.dao;
 
-import com.bluemsun.demo.entity.Student;
+import com.bluemsun.demo.entity.users;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
-import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestParam;
 
 @Mapper
 public interface UserdaoInterface {
 
     //学生登录验证
-    Student checkStudentLogin(@Param("studentId") int studentId, @Param("password") String password);
+    users checkStudentLogin(@Param("username") String username, @Param("password") String password);
 
     //学生信息更改
-    void updateStudent(Student student);
+    void updateStudent(users user);
 
     //查询 导出信息
-    Student getStudentInfo(@Param("studentId") int studentId);
+    users getStudentInfo(@Param("username") String username);
 }

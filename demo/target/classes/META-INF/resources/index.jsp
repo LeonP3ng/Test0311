@@ -8,6 +8,12 @@
 <body>
 hello spring boot
 ${msg}
+<form action="student/getInfo" method="post">
+   username: <input type="text" name="username"/>
+    <input type="submit" value="提交">
+</form>
+
+
 </body>
 
 </html>

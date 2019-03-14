@@ -3,12 +3,12 @@
 
 <mapper namespace="com.bluemsun.demo.dao.UserdaoInterface">
 
-    <select id="checkStudentLogin" resultType="Student">
-        SELECT * from student where student_id = #{studentId} and password = #{password}
+    <select id="checkStudentLogin" resultType="users">
+        SELECT * from users where username = #{username} and password = #{password}
     </select>
 
-    <select id="getStudentInfo" resultType="Student">
-        SELECT * from student where student_id = #{studentId}
+    <select id="getStudentInfo" resultType="users">
+        SELECT * from users where username = #{username}
     </select>
 
 </mapper>

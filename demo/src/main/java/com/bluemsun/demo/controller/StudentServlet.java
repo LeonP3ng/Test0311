@@ -2,7 +2,7 @@ package com.bluemsun.demo.controller;
 
 
 import com.bluemsun.demo.annotation.Anno;
-import com.bluemsun.demo.entity.Student;
+import com.bluemsun.demo.entity.users;
 import com.bluemsun.demo.service.UserServiceInterfece;
 import net.sf.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,8 +23,8 @@ public class StudentServlet {
     //根据id查对应的student对象所有属性
     @RequestMapping("/student/getInfo")
     @Anno(operationType = "select操作",operationName = "根据id查信息")
-    public void getAllInfoById(HttpServletResponse response, @RequestParam("studentId")int studentId) throws IOException {
-        Student studentInfo = userServiceInterfece.getStudentInfo(studentId);
+    public void getAllInfoById(HttpServletResponse response, @RequestParam("username")String username) throws IOException {
+        users studentInfo = userServiceInterfece.getStudentInfo(username);
         JSONObject jsonObject =  new JSONObject();
 
         if (studentInfo != null) {

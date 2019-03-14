@@ -6,9 +6,13 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 </head>
 <body>
-    <form action="/bootdemo/login/student" method="post">
-        id:<input type="text" name="studentId"/>
+    <form action="/bootdemo/login" method="post">
+        username:<input type="text" name="username"/>
         psw:<input type="password" name="password">
+
+
+        登录类型:<input type="text" name="rating">
+
         <input type="submit" value="登录">
     </form>
 
